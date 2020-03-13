@@ -9,23 +9,18 @@ const Friends = (props) => {
     
     return (
         <div className="friend-container">
-            <div className="total-friend">
-                <h3>Total Friends: {friends.length}</h3>
-                <h3>Total Income: {friendIncome}</h3>
-                <table>
-                {
-                    friends.map(user => <React.Fragment>
-                        <tr>
-                            <td><img src={user.img} alt=""/></td>
-                            <td>{user.name}</td>
-                        </tr>
-                    </React.Fragment>)
-                }
-                </table>
-
-                
-            </div>
-            
+            <h3>Total Friends: {friends.length}</h3>
+            <h3>Total Income: {friendIncome}</h3>
+            <table>
+            {
+                friends.map(user => <React.Fragment>
+                    <tr>
+                        <td><img src={user.img} alt=""/></td>
+                        <td>{user.name}</td>
+                    </tr>
+                </React.Fragment>)
+            }
+            </table>
         </div>
     );
 };
