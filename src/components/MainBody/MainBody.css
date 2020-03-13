@@ -1,0 +1,11 @@
+.main-body{
+    display: flex;
+    text-align: center;
+}
+.all-user{
+    width: 75%;
+    
+}
+.friends-status{
+width: 25%;
+}
