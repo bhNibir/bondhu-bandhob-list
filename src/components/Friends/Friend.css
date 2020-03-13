@@ -4,6 +4,8 @@
     border-radius: 5px;
     padding: 20px;
     box-shadow: 10px 10px 15px  #ffb0b0;
+    position: fixed;
+    width: 190px
 }
 
 .friend h3{

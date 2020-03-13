@@ -7,7 +7,7 @@ const Friends = (props) => {
     
     return (
         <div className="friend">
-            <h3>Total: {friends.length}</h3>
+            <h3>Total Friends: {friends.length}</h3>
             <h3>Total Income: {friendIncome}</h3>
         </div>
     );
