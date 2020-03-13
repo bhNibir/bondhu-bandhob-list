@@ -28,7 +28,6 @@ const MainBody = () => {
                 address : user.location,
                 gender : user.gender,
                 income : Math.floor((Math.random() * (1000 - 500) + 500)),
-                btnDisable : false
             }
     
             users.push(formatUser)
