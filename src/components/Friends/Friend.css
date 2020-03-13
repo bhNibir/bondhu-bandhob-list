@@ -1,0 +1,14 @@
+.friend{
+    background-color: white;
+    margin: 20px 15px 0px 50px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 32px  #ff7979;
+}
+
+.friend h3{
+    padding: 10px;
+    color: #ff7979;
+    border: 1px solid #ff7979;
+    border-radius: 5px;
+}
