@@ -5,7 +5,11 @@ import './User.css'
 
 const User = (props) => {
     const {name, username, img, email, address, income, phone} = props.user
-
+    
+    function btnHandler(){
+        props.friendHandler(props.user) ;
+        props.user.btnDisable = true
+    } 
     
     return (
         <div className="user">
@@ -19,7 +23,7 @@ const User = (props) => {
                         <h2>{name}</h2>
                         <p><FontAwesomeIcon icon={faUserCircle} /> {username}</p>                        
                         <p><FontAwesomeIcon icon={faMoneyBillAlt} /> ${income}</p>
-                        <button className="add-friend-btn" onClick={() => props.friendHandler(props.user)}><FontAwesomeIcon icon={faPlusCircle} /> Add Friend</button>
+                        <button className="add-friend-btn" disabled={props.user.btnDisable} onClick={btnHandler}><FontAwesomeIcon icon={faPlusCircle} /> Add Friend</button>
                     </div>
                     <div>
                         <p><small><strong><FontAwesomeIcon icon={faPhoneAlt} /></strong> {phone} <br/><strong><FontAwesomeIcon icon={faPaperPlane} /></strong> {email}</small></p>                     

@@ -15,21 +15,25 @@ const MainBody = () => {
     
 
     // Formatted  data
-    for (let index = 0; index < fakeUSER.length; index++) {
-        const user = fakeUSER[index];
-        const formatUser={
-            name : user.name.first + " " + user.name.last,
-            email : user.email,
-            img : user.picture.large ,
-            username : user.login.username,
-            phone : user.phone,
-            address : user.location,
-            gender : user.gender,
-            income : Math.floor((Math.random() * (1000 - 500) + 500))
+    formattedData(fakeUSER)
+    function formattedData(userArray){
+        for (let index = 0; index < userArray.length; index++) {
+            const user = userArray[index];
+            const formatUser={
+                name : user.name.first + " " + user.name.last,
+                email : user.email,
+                img : user.picture.large ,
+                username : user.login.username,
+                phone : user.phone,
+                address : user.location,
+                gender : user.gender,
+                income : Math.floor((Math.random() * (1000 - 500) + 500)),
+                btnDisable : false
+            }
+    
+            users.push(formatUser)
+    
         }
-
-        users.push(formatUser)
-
     }
 
     return (
