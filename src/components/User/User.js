@@ -5,7 +5,7 @@ import './User.css'
 
 const User = (props) => {
     const {name, username, img, email, address, income, phone} = props.user
-    const [btnInfo, setBtnInfo] = useState({btnText: "Bondhu Hobo", disable: false, icon: faPlusCircle})
+    const [btnInfo, setBtnInfo] = useState({btnText: "Bondhu Hobo", disable: false, icon: faPlusCircle, btnClass: "add-friend-btn"})
     
     
 
@@ -14,6 +14,7 @@ const User = (props) => {
         btnInfo.btnText = "Bondhu" 
         btnInfo.disable = true 
         btnInfo.icon = faUserFriends
+        btnInfo.btnClass = "friend-btn"
         
     } 
     
@@ -29,7 +30,7 @@ const User = (props) => {
                         <h2>{name}</h2>
                         <p><FontAwesomeIcon icon={faUserCircle} /> {username}</p>                        
                         <p><FontAwesomeIcon icon={faMoneyBillAlt} /> ${income}</p>
-                        <button className="add-friend-btn" disabled={btnInfo.disable} onClick={btnHandler}><FontAwesomeIcon icon={btnInfo.icon} /> {btnInfo.btnText}</button>
+                        <button className={btnInfo.btnClass} disabled={btnInfo.disable} onClick={btnHandler}><FontAwesomeIcon icon={btnInfo.icon} /> {btnInfo.btnText}</button>
                     </div>
                     <div>
                         <p><small><strong><FontAwesomeIcon icon={faPhoneAlt} /></strong> {phone} <br/><strong><FontAwesomeIcon icon={faPaperPlane} /></strong> {email}</small></p>                     

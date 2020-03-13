@@ -44,3 +44,13 @@
     cursor: pointer;
     font-size: 18px;
 }
+
+.friend-btn{
+    padding: 10px 30px;
+    color:  #ff7979;
+    background-color: white;
+    border: 2px solid #ff7979;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
